@@ -18,15 +18,15 @@ power$Sub_metering_1 <-as.numeric(as.character(power$Sub_metering_1))
 power$Global_active_power <-as.numeric(as.character(power$Global_active_power))
 power$Voltage <-as.numeric(as.character(power$Voltage))
 power$Global_reactive_power <-as.numeric(as.character(power$Global_reactive_power))
-#plot with type s
+#plot with type l
 par(mfrow = c(2,2))
-with(power,plot(DateTime, Global_active_power,xlab="",ylab="Global Active Power",type="s"))
-with(power,plot(DateTime, Global_active_power,xlab="datetime",ylab="Voltage",type="s"))
-with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="s"))
+with(power,plot(DateTime, Global_active_power,xlab="",ylab="Global Active Power",type="l"))
+with(power,plot(DateTime, Global_active_power,xlab="datetime",ylab="Voltage",type="l"))
+with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="l"))
 with(power,lines(DateTime, Sub_metering_2,col="red"))
 with(power,lines(DateTime, Sub_metering_3,col="blue"))
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),lty = c("solid"), pch = c(" "," ", " "),col = c("black","red", "blue"),lwd = c(1,1))
-with(power,plot(DateTime, Global_reactive_power,xlab="datetime",ylab="Global Reactive Power",type="s"))
+with(power,plot(DateTime, Global_reactive_power,xlab="datetime",ylab="Global Reactive Power",type="l"))
 
 #save tyo file
 dev.copy(png, width=480, height=480, file = "plot4.png")

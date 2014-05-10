@@ -16,8 +16,8 @@ power$Sub_metering_3 <-as.numeric(as.character(power$Sub_metering_3))
 power$Sub_metering_2 <-as.numeric(as.character(power$Sub_metering_2))
 power$Sub_metering_1 <-as.numeric(as.character(power$Sub_metering_1))
 
-#plot with type s
-with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="s"))
+#plot with type l
+with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="l"))
 with(power,lines(DateTime, Sub_metering_2,col="red"))
 with(power,lines(DateTime, Sub_metering_3,col="blue"))
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),lty = c("solid"), pch = c(" "," ", " "),col = c("black","red", "blue"),lwd = c(1,1))
