@@ -21,7 +21,7 @@ power$Global_reactive_power <-as.numeric(as.character(power$Global_reactive_powe
 #plot with type l
 par(mfrow = c(2,2))
 with(power,plot(DateTime, Global_active_power,xlab="",ylab="Global Active Power",type="l"))
-with(power,plot(DateTime, Global_active_power,xlab="datetime",ylab="Voltage",type="l"))
+with(power,plot(DateTime, Voltage,xlab="datetime",ylab="Voltage",type="l"))
 with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="l"))
 with(power,lines(DateTime, Sub_metering_2,col="red"))
 with(power,lines(DateTime, Sub_metering_3,col="blue"))
