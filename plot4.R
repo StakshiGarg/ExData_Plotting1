@@ -25,7 +25,7 @@ with(power,plot(DateTime, Global_active_power,xlab="datetime",ylab="Voltage",typ
 with(power,plot(DateTime, Sub_metering_1,xlab="",ylab="Energy Sub Metering",type="s"))
 with(power,lines(DateTime, Sub_metering_2,col="red"))
 with(power,lines(DateTime, Sub_metering_3,col="blue"))
-legend("topright",col=c("black","red","blue"),pch="-", bty="n",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),lty = c("solid"), pch = c(" "," ", " "),col = c("black","red", "blue"),lwd = c(1,1))
 with(power,plot(DateTime, Global_reactive_power,xlab="datetime",ylab="Global Reactive Power",type="s"))
 
 #save tyo file
